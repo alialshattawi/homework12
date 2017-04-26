@@ -2,9 +2,9 @@
 
 <h1>Listing Doctors</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
-    <tr>
+    <tr class="success">
       <th>First name</th>
       <th>Last name</th>
       <th>License number</th>
@@ -23,9 +23,9 @@
         <td><%= doctor.email %></td>
         
         <td><%= doctor.phone_number %></td>
-        <td><%= link_to 'Show', doctor %></td>
-        <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
-        <td><%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', doctor, class:"btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_doctor_path(doctor),class:"btn btn-success" %></td>
+        <td><%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Doctor', new_doctor_path %>
+<%= link_to 'New Doctor', new_doctor_path,class:"btn btn-info" %>

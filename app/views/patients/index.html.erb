@@ -2,9 +2,9 @@
 
 <h1>Listing Patients</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
-    <tr>
+    <tr class="success">
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
@@ -24,9 +24,9 @@
         <td><%= patient.phone %></td>
         <td><%= patient.status %></td>
  
-        <td><%= link_to 'Show', patient %></td>
-        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', patient,class:"btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient),class:"btn btn-success" %></td>
+        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Patient', new_patient_path %>
+<%= link_to 'New Patient', new_patient_path,class:"btn btn-info" %>
