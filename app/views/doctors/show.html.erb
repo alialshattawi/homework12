@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @doctor.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @doctor.last_name %>
+</p>
+
+<p>
+  <strong>License number:</strong>
+  <%= @doctor.license_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @doctor.email %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @doctor.phone_number %>
+</p>
+
+<strong>Patients List:</strong>
+<br>
+
+  <% @doctor.patients.each do |g| %>
+  <strong>First name:</strong>
+   <%= g.first_name  %><br>
+  
+  <strong>Last name:</strong>
+  <%= g.last_name  %><br>
+  
+    <strong>Email:</strong>
+     <%= g.email %><br>
+  
+     <strong>Phone:</strong>
+      <%= g.phone %><br>
+ <%end%>
+<br>
+ 
+
+<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+<%= link_to 'Back', doctors_path %>
